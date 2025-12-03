@@ -29,22 +29,22 @@ app.get('/ussd', async (req, res) => {
       sessions[sessionId].state = 'MENU_SELECTION'
       break;
 
-    case 'MENU_SELECTION':
-      switch (text) {
-        case '1':
-          responseText = `Select Product. \n1. Domestic Package \n2. Medical Insurance \n3.Motor`
-          sessions[sessionId].state = 'PRODUCT_SELECTION'
-          break;
+    // case 'MENU_SELECTION':
+    //   switch (text) {
+    //     case '1':
+    //       responseText = `Select Product. \n1. Domestic Package \n2. Medical Insurance \n3.Motor`
+    //       sessions[sessionId].state = 'PRODUCT_SELECTION'
+    //       break;
 
-        case '2':
-          responseText = `END Coming Soon!`
-          sessions[sessionId].state = 'VIEW_POLICIES_SELECTION'
-          delete sessions[sessionId]
-          break;
+    //     case '2':
+    //       responseText = `END Coming Soon!`
+    //       sessions[sessionId].state = 'VIEW_POLICIES_SELECTION'
+    //       delete sessions[sessionId]
+    //       break;
           
-        default:
-          break;
-      }
+    //     default:
+    //       break;
+    //   }
 
     default:
       break;
